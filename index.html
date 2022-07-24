@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Quiz</h1>
+    </header>
+    <div class="main">
+        <div class="nameArea">
+            <div class="name">
+                Olá, digite o seu nome para participar do Quiz
+                <input type="text" id="inputText" autofocus placeholder=" Digite seu Nome" onkeyup="inputKeyUp(event)"/>
+                <button>Começar</button>
+            </div>
+
+        </div>
+            <div class="themeArea">
+                <h3></h3>
+                <div class="progress">
+                    <div class="progress_value"><div class="value"></div></div>
+                    <div class="progress_bar"></div>
+                </div>
+                <div class="themes">
+                    <div id="theme_g" class="theme" data-tema="general">
+                        <div class="checked"><img src="checkedb.png"/></div>
+                        <div class="theme_img"><img src="generalb.png"/></div>
+                        <div class="theme_info">
+                            <h4>Conhecimentos Gerais</h4>
+                            <p> Teste seus conhecimentos em assuntos relacionados a Conhecimentos Gerais</p>
+                        </div>
+                    </div>
+                    <div id="theme_s" class="theme" data-tema="sports">
+                        <div class="checked"><img src="checkedb.png"/></div>
+                        <div class="theme_img"><img src="sportsb.png"/></div>
+                        <div class="theme_info">
+                            <h4>Esportes</h4>
+                            <p> Teste seus conhecimentos em assuntos relacionados a Esportes</p>
+                        </div>
+                    </div>
+                    <div id="theme_a"class="theme" data-tema="artAndCulture">
+                        <div class="checked"><img src="checkedb.png"/></div>
+                        <div class="theme_img"><img src="artAndCultureb.png"/></div>
+                        <div class="theme_info">
+                            <h4>Arte e Cultura Pop</h4>
+                            <p> Teste seus conhecimentos em assuntos relacionados a Arte e Cultura Pop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="questionArea">
+            <div class="question">...</div>
+            <div class="options">
+                
+            </div>
+        </div>
+
+        <div class="scoreArea">
+            <img src="finish.png" class="prizeImage" />
+            <div class="scoreText1">Parabéns!</div>
+            <div class="scorePct">Acertou 99%</div>
+            <div class="scoreText2">Você respondeu 9 questões e acertou 8.</div>
+            <button>Fazer novamente</button>
+        </div>
+    </div>
+    <footer> 
+        Feito por Vitor Barbeiro
+    </footer>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
