@@ -200,12 +200,12 @@ let general = [
 
 let sports = [
     {
-        question: 'A cidade de Olímpia, que deu origem aos jogos olímpicos, fica localizada em que país europeu?',
+        question: 'No rugby, ou futebol americano, qual é o formato da bola usada durante o jogo?',
         options: [
-            'França',
-            'Portugal',
-            'Grécia',
-            'Alemanha'
+            'Redonda',
+            'Retângular',
+            'Triangular',
+            'Oval'
         ],
         answer: 3
     },

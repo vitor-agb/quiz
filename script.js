@@ -1,6 +1,7 @@
 let currentQuestion = [0];
 let correctAnswers = 0;
 let userName = '';
+let check = '';
 
 document.querySelector('.scoreArea button').addEventListener('click', resetEvent);
 
@@ -9,10 +10,13 @@ document.querySelectorAll('.theme').forEach(item => {
         theme = item.getAttribute('data-tema');
         if(theme === 'general') {
             theme = general;
+            check = "general";
         } else if (theme === 'sports') {
             theme = sports;
+            check = "sports";
         } else if (theme === 'artAndCulture') {
             theme = artAndCulture;
+            check = "artAndCulture";
         }
         showQuestion();
     }); 
@@ -49,6 +53,7 @@ function showTheme() {
     document.querySelector('.themeArea').style.display = 'block';
     document.querySelector('.themeArea h3').innerHTML = `Olá ${userName}, escolha um dos temas abaixo para começar.`;
 };
+
 
 
 
@@ -129,12 +134,25 @@ function finishQuiz() {
     document.querySelector('.questionArea').style.display = 'none';
     document.querySelector('.scoreArea').style.display = 'block';
     document.querySelector('.progress_bar').style.width = `100%`;
-    if(correctAnswers === 10) {
-        document.querySelector('.checked img').setAttribute('src', 'checkedc.png');
-        document.querySelector('.checked img').style.opacity = '1';
-
-    }
+    checked();
 }
+
+function checked() {
+    if(correctAnswers === 10) {
+        if(check === 'general') {
+            document.querySelector('[data-tema="general"] .checked img').setAttribute('src', 'checkedc.png');
+            document.querySelector('[data-tema="general"] .checked img').style.opacity = '1';
+        }
+        if(check === 'sports') {
+            document.querySelector('[data-tema="sports"] .checked img').setAttribute('src', 'checkedc.png');
+            document.querySelector('[data-tema="sports"] .checked img').style.opacity = '1';
+        }  
+        if(check === 'artAndCulture') {
+            document.querySelector('[data-tema="artAndCulture"] .checked img').setAttribute('src', 'checkedc.png');
+            document.querySelector('[data-tema="artAndCulture"] .checked img').style.opacity = '1';
+        }    
+    }
+};
 
 function resetEvent () {
     correctAnswers = 0;
