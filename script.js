@@ -6,6 +6,19 @@ let check = '';
 document.querySelector('.scoreArea button').addEventListener('click', resetEvent);
 
 document.querySelectorAll('.theme').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        mouseItem = item.getAttribute('data-tema');
+        item.querySelector('.theme_img img').setAttribute('src', `${mouseItem}c.png`);
+        item.querySelector('.theme_info').style.bottom = '0px';
+    }),
+    item.addEventListener('mouseleave', () => {
+        item.querySelector('.theme_img img').setAttribute('src', `${mouseItem}b.png`);
+        item.querySelector('.theme_info').style.bottom = '-105px';
+    })
+});
+
+
+document.querySelectorAll('.theme').forEach(item => {
     item.addEventListener('click', () => {
         theme = item.getAttribute('data-tema');
         if(theme === 'general') {
@@ -19,20 +32,10 @@ document.querySelectorAll('.theme').forEach(item => {
             check = "artAndCulture";
         }
         showQuestion();
+        item.querySelector('.theme_img img').setAttribute('src', `${theme}b.png`);
     }); 
 });
-document.querySelectorAll('.theme').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        theme = item.getAttribute('data-tema');
-        item.querySelector('.theme_img img').setAttribute('src', `${theme}c.png`);
-        item.querySelector('.theme_info').style.bottom = '0px';
-    }),
-    item.addEventListener('mouseleave', () => {
-        item.querySelector('.theme_img img').setAttribute('src', `${theme}b.png`);
-        item.querySelector('.theme_info').style.bottom = '-105px';
 
-    })
-});
 
 
 function inputKeyUp(e) {
