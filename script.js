@@ -65,14 +65,14 @@ function showQuestion() {
         document.querySelector('.progress_bar').style.width = `${pct}%`;
         document.querySelector('.progress_value').style.width = `${pct}%`;
         document.querySelector('.value').innerHTML = `${pct}%`;
-        document.querySelector('.progress').style.display = 'block';
+        document.querySelector('.progress').style.display = 'flex';
         if( document.querySelector('.progress_value').style.width !== '0%') {
         document.querySelector('.value').style.display = 'flex';
         };
         document.querySelector('.scoreArea').style.display = 'none';
         document.querySelector('.themes').style.display = 'none';
         document.querySelector('h3').style.display = 'none';
-        document.querySelector('.questionArea').style.display = 'block';
+        document.querySelector('.questionArea').style.display = 'flex';
 
         document.querySelector('.question').innerHTML = q.question;
         let optionsHtml = '';
@@ -134,6 +134,7 @@ function finishQuiz() {
     document.querySelector('.questionArea').style.display = 'none';
     document.querySelector('.scoreArea').style.display = 'block';
     document.querySelector('.progress_bar').style.width = `100%`;
+
     checked();
 }
 

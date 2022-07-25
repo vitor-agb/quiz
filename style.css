@@ -90,11 +90,12 @@ button:hover {
 }
 
 .progress {
-    width: 100%;
-    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     display: none;
     margin-bottom: 15px;
+    
 }
 .progress_value {
     display: flex;
@@ -135,6 +136,8 @@ button:hover {
 .themeArea {
     display: none;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -207,6 +210,7 @@ button:hover {
 .questionArea,
 .scoreArea {
     display: none;
+    
 }
 
 .questionArea {
@@ -216,6 +220,7 @@ button:hover {
     padding: 10px;
     border-radius: 15px;
     box-shadow: 1px 1px 10px #202020;
+    flex-direction: column;
 }
 
 .question {
@@ -306,4 +311,22 @@ footer {
     font-size: 13px;
     text-transform: uppercase;
     text-align: center;
+}
+
+@media (max-width:940px) {
+    .themes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress,
+    .questionArea,
+    .scoreArea {
+        width: calc(100vw - 15px);
+    } 
+
+    
+    .question {
+        width: 100%;
+    }
 }
