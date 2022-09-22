@@ -10,7 +10,7 @@ In this game, has 3 topic:
 
 Some Features:
 - Score Points at the end.
-- Green Check showing the topic card if your answers all questions correctly.
+- Checking in the topic card showing if your answers all questions correctly.
 
 #### See the Project Page
 **[https://vitor-agb.github.io/quiz/](https://vitor-agb.github.io/quiz/)**
