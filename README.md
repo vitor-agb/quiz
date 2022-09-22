@@ -1,9 +1,9 @@
 # Quiz
 ### My personal project using Javascript.
 
-### A game where your objective is to try the answers questions correctly about a variety of subjects.
+### A game where your objective is to answers questions correctly about a variety of subjects.
 
-In this game, have 3 topic:
+In this game, has 3 topic:
 - General Knowledge
 - Sports
 - Art and Pop Culture
