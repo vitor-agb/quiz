@@ -1,5 +1,5 @@
 # Quiz
-### My first personal project.
+### My personal project using Javascript.
 
 ### A game where your objective is to try the answers questions correctly about a variety of subjects.
 
